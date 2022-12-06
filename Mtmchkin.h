@@ -20,7 +20,7 @@ public:
 
     /*
      * C'tor of the game:
-     *
+     * 
      * @param playerName - The name of the player.
      * @param cardsArray - A ptr to the cards deck.
      * @param numOfCards - Num of cards in the deck.
@@ -29,6 +29,27 @@ public:
     */
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards);
 
+    /*
+    * D'tor of the game
+    */
+    ~Mtmchkin();
+    
+    /*
+     * Copy constructor
+     * 
+     * @param otherMtmchkin - The other Mtmchkin game.
+     *      
+    */
+    Mtmchkin(const Mtmchkin& otherMtmchkin);
+
+    /*
+    * Operator =
+    *
+    * @param otherMtmchkin - The other mtmchkin game.
+    * @return
+    * return by reference the object the operator has been used on.
+    */
+    Mtmchkin& operator=(const Mtmchkin& otherMtmchkin);
 
     /*
      * Play the next Card - according to the instruction in the exercise document
@@ -57,11 +78,15 @@ public:
      */
     GameStatus getGameStatus() const;
 
-    //TODO: complete the Mtmchkin class.
 
 private:
-    //TODO: complete the Mtmchkin class.
+    Player m_player;
+    Card* m_cardDeck;
+    int m_deckSize;
+    int m_currentCardIndex;
 
+    /*First card in the deck*/
+    static const int INITIAL_CARD_INDEX = 0;
 };
 
 
