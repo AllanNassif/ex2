@@ -74,8 +74,8 @@ int Player::getAttackStrength() const{
     return m_force + m_level;
 }
 
-Player::Player(const std::string& name,int maxHP,int force) : m_name(name),m_level(INITIAL_LEVEL),m_HP(m_maxHP)
-,m_coins(INITIAL_COINS) {
+Player::Player(const std::string& name,int maxHP,int force) : m_name(name),m_level(INITIAL_LEVEL),
+    m_force(DEFAULT_FORCE),m_maxHP(DEFAULT_MAX_HP),m_HP(DEFAULT_MAX_HP),m_coins(INITIAL_COINS) {
     if(force>0){
         m_force = force;
     }
@@ -84,3 +84,5 @@ Player::Player(const std::string& name,int maxHP,int force) : m_name(name),m_lev
         m_HP=m_maxHP;
     }
 }
+
+
