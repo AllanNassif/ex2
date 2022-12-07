@@ -2,7 +2,7 @@
 
 
 Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards) : m_player(playerName),
-m_cardDeck(new Card[numOfCards]),m_deckSize(numOfCards),m_currentCardIndex(INITIAL_CARD_INDEX){
+    m_cardDeck(new Card[numOfCards]),m_deckSize(numOfCards),m_currentCardIndex(INITIAL_CARD_INDEX){
     for(int i=0 ; i< numOfCards; i++){
         m_cardDeck[i] = cardsArray[i];
     }
@@ -16,8 +16,8 @@ Mtmchkin::~Mtmchkin(){
 }
 
 Mtmchkin::Mtmchkin(const Mtmchkin& otherMtmchkin):m_player(otherMtmchkin.m_player),
-m_cardDeck(new Card[otherMtmchkin.m_deckSize]),m_deckSize(otherMtmchkin.m_deckSize),
-m_currentCardIndex(otherMtmchkin.m_currentCardIndex) {
+    m_cardDeck(new Card[otherMtmchkin.m_deckSize]),m_deckSize(otherMtmchkin.m_deckSize),
+    m_currentCardIndex(otherMtmchkin.m_currentCardIndex) {
 
     for(int i=0 ; i<m_deckSize;i++){
         m_cardDeck[i]=otherMtmchkin.m_cardDeck[i];
@@ -73,3 +73,4 @@ GameStatus Mtmchkin::getGameStatus() const{
         return GameStatus::Win;
     }
 }
+

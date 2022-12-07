@@ -80,6 +80,7 @@ public:
 
 
 private:
+
     Player m_player;
     Card* m_cardDeck;
     int m_deckSize;
