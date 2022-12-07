@@ -1,8 +1,7 @@
 #include "Card.h"
 
 
-Card::Card(CardType type,const CardStats& stats): m_effect(type),m_stats(stats) {
-}
+Card::Card(CardType type,const CardStats& stats): m_effect(type),m_stats(stats) {}
 
 void Card::applyEncounter(Player& player) const{
     if (m_effect == CardType::Battle){
